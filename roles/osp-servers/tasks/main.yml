@@ -21,7 +21,7 @@
       curl -o /tmp/internal.repo http://www.opentlc.com/download/ansible_bootcamp/repo/internal.repo
       cp /tmp/internal.repo /etc/yum.repos.d/internal.repo
   loop:
-    - "{{ osp_server.frontend }}"
+    - "{{ osp_servers.frontend }}"
     - "{{ osp_servers.app1 }}"
     - "{{ osp_servers.app2 }}"
     - "{{ osp_servers.db }}"
@@ -36,7 +36,7 @@
     wait: true
     timeout: 180
   loop:
-    - "{{ osp_server.frontend }}"
+    - "{{ osp_servers.frontend }}"
     - "{{ osp_servers.app1 }}"
     - "{{ osp_servers.app2 }}"
     - "{{ osp_servers.db }}"
