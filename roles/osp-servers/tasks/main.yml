@@ -42,9 +42,6 @@
     - "{{ osp_servers.db }}"
   register: instancefloatingip
 
-- name: Show "{{ instanceip }}" public IP
-  debug: Wait for "{{ instance_name }}" to be avaiable 
-
 - name: Wait for server to be available
   wait_for:
     host: "{{ item.floating_ip.floating_ip_address }}"
