@@ -1,5 +1,3 @@
----
-# vars file for db-tier
 postgresql_databases:
   - name: example_db
 postgresql_users:
